@@ -1,0 +1,41 @@
+ไฟล์ที่เรียก rama-print-2.0.1.jar
+WebContent\opd\appointment\
+	1.nootbook_appointment_patient.jsp
+	2.popup_appointment_patient.jsp
+	3.appointmentFollowUps.jsp
+
+
+<!-- 006223 20150519 Start JasperPrintApplet -->
+ <applet code="th.mu.ra.emr.printdoc.JasperPrintAppletService"
+id="JasperPrintAppletService" name="JasperPrintAppletService"
+height="1" width="1"
+archive="${pageContext.request.contextPath}/resources/jar/rama-print-2.0.0.jar,
+${pageContext.request.contextPath}/resources/jar/jasperreports-3.0.0.jar">
+</applet>
+<!-- 006223 20150519 End JasperPrintApplet -->
+
+<!-- 012136 Start JasperPrintApplet NEW APPOINTMENT 28/9/2560-->
+<%-- <applet code="th.mu.ra.emr.printdoc.JasperPrintAppletService"
+id="JasperPrintAppletService" name="JasperPrintAppletService"
+height="1" width="1"  
+archive="${pageContext.request.contextPath}/resources/jar/rama-print-2.0.1.jar,
+${pageContext.request.contextPath}/resources/jar/jasperreports-3.0.0.jar"> 
+</applet> --%>
+<!-- 012136 END JasperPrintApplet NEW APPOINTMENT 28/9/2560 -->
+
+
+
+******************************************************************************
+
+
+ไฟล์ที่แก้ lastdate ปรับรอ ramaemr 
+
+1.WebContent\opd\appointment\nootbook_appointment_patient.js
+	ลบคอมเม้น"//" ออก เพื่อให้ใช้งานได้ ใน
+	function searchNoteBookAppointmentPatientByHn()
+	//showLastVisit(dwr.util.getValue('hn'));
+
+2.WebContent\opd\appointment\view_nootbook_appointment_patient.js
+	ลบคอมเม้น"//"ออก เพื่อให้ใช้งานได้ ใน 
+	function searchNoteBookAppointmentPatientByHn()
+		//showLastVisit(dwr.util.getValue('hn')); 
